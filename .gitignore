@@ -32,4 +32,6 @@
 *.app
 
 # VS intermediate files
-HelloWorld/.vs/*.*
+HelloWorld/.vs/
+HelloWorld/HelloWorld/x64
+HelloWorld/x64
