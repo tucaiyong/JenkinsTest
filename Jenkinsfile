@@ -20,7 +20,7 @@ node() {
 
 		stage("deploy") {
 			zip dir: 'HelloWorld\\\\x64\\\\Release', glob: '*.exe,*.dll', zipFile: 'build.zip'
-			emailext body: '', subject: 'New build is ready', to: 'tucaiyong@gmail.com'
+			emailext attachmentsPattern: '*.zip', body: '', subject: 'New build is ready', to: 'tucaiyong@gmail.com'
 		}
 	}
 }
