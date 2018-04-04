@@ -15,7 +15,7 @@ node() {
 		}
 
 		stage("build") {
-			bat "MsBuild.exe '${WORKSPACE}\\HelloWorld\\HelloWorld.sln' /p:Configuration=Release /p:Platform=x64 /t:rebuild"
+			bat "\"${tool 'MSBuild'}\" \"${WORKSPACE}\\HelloWorld\\HelloWorld.sln\" /p:Configuration=Release /p:Platform=x64 /t:rebuild"
 		}
 
 		stage("deploy") {
